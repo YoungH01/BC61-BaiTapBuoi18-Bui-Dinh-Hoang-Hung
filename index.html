@@ -1,1 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <section class="mt-4">
+        <div class="container">
+            <div class="arrContent d-flex justify-content-center align-items-center flex-column">
+                <div class="inputArr mb-3">
+                    <input type="number" placeholder="nhập số n" id="getNumber">
+                    <button onclick="addNumber()">Thêm số</button>
+                </div>
+                <div class="showArr mb-3" id="showNumber"></div>
+                <div class="outputQuestArr">
+                    <div class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          Tổng số dương
+                        </button>
+                        <ul class="dropdown-menu">
+                          <div class="contentOutput">
+                            <button onclick="sumPositiveNumber()">Tính tổng</button>
+                            <div id="ansSumPos"></div>
+                          </div>
+                        </ul>
+                        
+                    </div>
+                    <div class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Đếm số dương
+                        </button>
+                        <ul class="dropdown-menu drop2">
+                          <div class="contentOutput">
+                            <button onclick="countPositiveNumber()">Đếm số</button>
+                            <div id="countPos"></div>
+                          </div>
+                        </ul>
+                    </div>
+                    <div class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          Tìm số nhỏ nhất
+                        </button>
+                        <ul class="dropdown-menu drop3">
+                          <div class="contentOutput">
+                            <button onclick="findMinNumber()">Tìm số nhỏ nhất</button>
+                            <div id="ansMin"> </div>
+                          </div>
+                        </ul>
+                        
+                    </div>
+                    <div class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          Tìm số dương nhỏ nhất
+                        </button>
+                        <ul class="dropdown-menu drop4">
+                          <div class="contentOutput">
+                            <button onclick="findMinPosNumber()">Tìm số dương nhỏ nhất</button>
+                            <div id="minPos"> </div>
+                          </div>
+                        </ul>
+                        
+                    </div>
+                    <div class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          Tìm số chẵn cuối cùng
+                        </button>
+                        <ul class="dropdown-menu drop5">
+                          <div class="contentOutput">
+                            <button onclick="findLastEvenNumber()">Tìm số chẵn</button>
+                            <div id="lastEven"></div>
+                          </div>
+                        </ul>
+                        
+                    </div>
+                    <div class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          Đổi chỗ
+                        </button>
+                        <ul class="dropdown-menu drop6">
+                          <div class="contentOutput">
+                            <input type="number" placeholder="Nhập số vị trí 1" id="item1">
+                            <input type="number" placeholder="Nhập số vị trí 2" id="item2">
+                            <button onclick="swapNumber()">Đổi chỗ</button>
+                            <div id="ansSwap"> </div>
+                          </div>
+                        </ul>
+                        
+                    </div>
+                    <div class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          Sắp xếp tăng dần
+                        </button>
+                        <ul class="dropdown-menu drop7">
+                          <div class="contentOutput">
+                            <button onclick="selectionSort()">Sắp xếp</button>
+                            <div id="ansSort"></div>
+                          </div>
+                        </ul>
+                        
+                    </div>
+                    <div class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          Tìm số nguyên tố đầu tiên
+                        </button>
+                        <ul class="dropdown-menu drop8">
+                          <div class="contentOutput">
+                            <button onclick="findFirstPrime()">Tìm số nguyên tố</button>
+                            <div id="ansPrime"> </div>
+                          </div>
+                        </ul>
+                        
+                    </div>
+                    <div class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          Đếm số nguyên
+                        </button>
+                        <ul class="dropdown-menu drop9">
+                          <div class="contentOutput">
+                            <div class="quest9">
+                              <input class="rounded" type="number" placeholder="nhập số n" id="getNumberQuest9">
+                              <button onclick="addNumberQuest9()">Thêm số</button>
+                            </div>
+                            <div class="mb-3" id="showNumberQuest9"></div>
+                            <button onclick="countInteger()">Đếm số nguyên</button>
+                            <div id="ansInter"> </div>
+                          </div>
+                        </ul>
+                        
+                    </div>
+                    <div class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          So sánh số lượng số âm và dương
+                        </button>
+                        <ul class="dropdown-menu drop10">
+                          <div class="contentOutput">
+                            <button onclick="compareNumber()">So sánh</button>
+                            <div id="ansCompare"> </div>
+                          </div>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+        crossorigin="anonymous"></script>
+    <script src="./script.js"></script>
+</body>
+
+</html>
